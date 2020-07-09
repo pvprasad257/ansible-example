@@ -1,0 +1,12 @@
+---
+- hosts: tag_Type_Slave
+  gather_facts: no
+  name: Playbook to install httpd
+  remote_user: ec2-user
+  become: yes
+  tasks:
+  - name: task to install httpd
+    yum: 
+      name: httpd
+      state: latest
+    
