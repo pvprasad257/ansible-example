@@ -9,4 +9,8 @@
     yum: 
       name: httpd
       state: latest
-    
+  - name: start httpd service
+    service:
+      name: httpd
+      state: start
+
